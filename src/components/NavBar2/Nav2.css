@@ -1,0 +1,35 @@
+.Nav2 {
+  /* flex box layout */
+position: absolute;
+    top: 0%;
+    left: 0;
+    right: 0;
+  display: flex;
+  justify-content: center;
+ 
+
+ 
+  background-color: #000000;
+  overflow: hidden;
+}
+
+.nav a {
+  text-decoration: none;
+}
+
+.NavTitle {
+    font-size: 24px;
+    font-weight: 700;
+    color: #f2f2f2;
+    padding-left: 10px;
+    margin: 5;
+
+
+  
+  
+
+}
+
+
+
+

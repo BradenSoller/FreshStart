@@ -19,7 +19,7 @@ import InfoPage from '../InfoPage/InfoPage';
 import LandingPage from '../LandingPage/LandingPage';
 import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
-
+import NavBar2 from '../NavBar2/Nav2';
 import './App.css';
 
 function App() {
@@ -34,7 +34,9 @@ function App() {
   return (
     <Router>
       <div>
+        <NavBar2 />
         <Nav />
+        {/* The main content of the app will be rendered here */}
         <Switch>
           {/* Visiting localhost:5173 will redirect to localhost:5173/home */}
           <Redirect exact from="/" to="/home" />
