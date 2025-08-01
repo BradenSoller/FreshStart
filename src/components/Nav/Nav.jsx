@@ -30,8 +30,8 @@ function Nav() {
               Home
             </Link>
 
-            <Link className="navLink" to="/info">
-              Info Page
+            <Link className="navLink" to="/catalogue">
+              Catologue
             </Link>
 
             <LogOutButton className="navLink" />
