@@ -13,4 +13,4 @@ function InfoPage() {
   );
 }
 
-export default InfoPage;
+export default InfoPage
