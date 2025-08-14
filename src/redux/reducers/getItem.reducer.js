@@ -7,4 +7,4 @@ const AllItems = (state = [], action) => {
     }
 };
   
-export default AllAnime
+export default AllItems

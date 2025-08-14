@@ -16,3 +16,8 @@ import axios from "axios";
         }
 
  }
+
+  export default function* ItemSaga() { 
+   yield takeLatest("FETCH_ALL_ITEMS", getAllAnime)
+
+  }
