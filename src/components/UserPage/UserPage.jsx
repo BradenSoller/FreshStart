@@ -1,6 +1,7 @@
 import React from 'react';
 import LogOutButton from '../LogOutButton/LogOutButton';
 import {useSelector} from 'react-redux';
+import { all } from 'axios';
 
 function UserPage() {
   // this component doesn't do much to start, just renders some user reducer info to the DOM
@@ -15,7 +16,22 @@ function UserPage() {
   return (
     <div className="container">
    <div className="item-list"> 
-     
+        {allItems.map((item) => {
+          
+          return (
+            <div key={item.id} className="item-card">
+              <h3>{item.name}</h3>
+              <p>{item.description}</p>
+              <img src={item.image} alt={item.name} />
+            </div>
+          );
+
+
+        })}
+          
+        
+       
+        
    </div>
     </div>
   );
