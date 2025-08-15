@@ -9,10 +9,10 @@ const cloudinaryUpload = require("../modules/cloudinary.config");
 /**
  * GET route template
  */
-router.get('/items', (req, res) => {
+router.get('/Items', (req, res) => {
   const getItemsDetails =
     `
-  SELECT * FROM "Additem"
+  SELECT * FROM "AddItem"
     
   `
  
@@ -20,6 +20,8 @@ router.get('/items', (req, res) => {
     .then(result => {
 
       res.send(result.rows);
+      console.log("Get all appointments", result.rows);
+      
    
     })
     .catch((err) => {

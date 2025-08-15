@@ -2,11 +2,16 @@ import React from 'react';
 import LogOutButton from '../LogOutButton/LogOutButton';
 import {useSelector} from 'react-redux';
 import { all } from 'axios';
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 
 function UserPage() {
   // this component doesn't do much to start, just renders some user reducer info to the DOM
   const user = useSelector((store) => store.user);
   const allItems = useSelector((store) => store.AllItems);
+  console.log('allItems:', allItems);
+  
+  const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch({ type: "FETCH_ALL_ITEMS" });
@@ -20,7 +25,7 @@ function UserPage() {
           
           return (
             <div key={item.id} className="item-card">
-              <h3>{item.name}</h3>
+              <h3>{item.title}</h3>
               <p>{item.description}</p>
               <img src={item.image} alt={item.name} />
             </div>

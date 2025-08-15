@@ -9,8 +9,10 @@ import axios from "axios";
           });
           yield put({
             type: "SET_ITEMS",
-            payload: response.data,
+            payload: response.data
           });
+          console.log("All items fetched successfully:", response.data);
+          
         } catch (error) {
           console.log("Unable to get pending events from server", error);
         }
@@ -18,6 +20,6 @@ import axios from "axios";
  }
 
   export default function* ItemSaga() { 
-   yield takeLatest("FETCH_ALL_ITEMS", getAllAnime)
+   yield takeLatest("FETCH_ALL_ITEMS", getAllItems)
 
   }
