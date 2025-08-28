@@ -9,7 +9,7 @@ const cloudinaryUpload = require("../modules/cloudinary.config");
 /**
  * GET route template
  */
-router.get('/Items', (req, res) => {
+router.get('/Item', (req, res) => {
   const getItemsDetails =
     `
   SELECT * FROM "AddItem"

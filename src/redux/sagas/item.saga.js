@@ -5,7 +5,7 @@ import axios from "axios";
         try {
           const response = yield axios({
             method: "GET",
-            url: "/api/Items/Items",
+            url: "/api/Item/Item",
           });
           yield put({
             type: "SET_ITEMS",
