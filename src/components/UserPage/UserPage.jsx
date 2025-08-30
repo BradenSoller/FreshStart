@@ -18,6 +18,32 @@ function UserPage() {
     window.scrollTo(0, 0);
   }, []);
 
+  const [title, setTitle] = useState("");
+  const [imageInput, setImageInput] = useState("");
+  const [description, setDescription] = useState("");
+  const [size, setSize] = useState("");
+  
+  const eventForm = new FormData();
+
+  const newItem = (event) => {
+    event.preventDefault();
+    eventForm.append("image", imageInput);
+    eventForm.append("title", title);
+    eventForm.append("description", description);
+    eventForm.append("size", size);
+    console.log("eventForm:", eventForm);
+
+    dispatch({
+      type: "FETCH_NEW_ITEM",
+      payload: eventForm,
+    });
+    setTitle("");
+    setImageInput("");
+    setDescription("");
+    setSize("");
+  };
+
+
   return (
     <div className="container">
    <div className="item-list"> 
@@ -33,6 +59,8 @@ function UserPage() {
 
 
         })}
+
+       
           
         
        
