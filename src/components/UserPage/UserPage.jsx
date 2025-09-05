@@ -4,6 +4,7 @@ import {useSelector} from 'react-redux';
 import { all } from 'axios';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
+import { useState } from 'react';
 
 function UserPage() {
   // this component doesn't do much to start, just renders some user reducer info to the DOM
