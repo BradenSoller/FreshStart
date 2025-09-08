@@ -6,6 +6,8 @@ import { all } from 'axios';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
+import { Button } from '@mui/material';
+import AttachFileIcon from '@mui/icons-material/AttachFile';
 
 function AboutPage() {
   // this component doesn't do much to start, just renders some user reducer info to the DOM
@@ -55,14 +57,22 @@ function AboutPage() {
           onChange={(event) => setTitle(event.target.value)}
         />
       </div>
+  
+      <Button className='ImageUploadButton'>
+        <AttachFileIcon /> 
       <div className='imageInput'>
         <input
           id="image-upload"
           type="file"
           onChange={(e) => setImageInput(e.target.files[0])}
           style={{ display: "none" }}
-        />
-        </div>
+          />
+          </div>
+      </Button>
+          
+          
+       
+       
     </div>
 
 
